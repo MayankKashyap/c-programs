@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Responsive Navbar</title>
+  <style>
+    body{margin:0;font-family:Arial;background:#f3f4f6}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:16px;background:#111;color:#fff}
+    .links{display:flex;gap:20px}
+    .links a{color:#fff;text-decoration:none}
+    .menu{display:none;cursor:pointer}
+    @media(max-width:600px){
+      .links{display:none;flex-direction:column;position:absolute;top:56px;right:0;background:#222;padding:12px}
+      .links.show{display:flex}
+      .menu{display:block}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MySite</div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <div class="links" id="links">
+      <a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Contact</a>
+    </div>
+  </nav>
+  <script>
+    function toggleMenu(){document.getElementById("links").classList.toggle("show")}
+  </script>
+</body>
+</html>
