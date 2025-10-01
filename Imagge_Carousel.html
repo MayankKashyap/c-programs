@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Image Slider</title>
+  <style>
+    body{margin:0;display:grid;place-items:center;height:100vh;background:#222}
+    .slider{position:relative;width:80%;max-width:600px;overflow:hidden;border-radius:10px}
+    .slides{display:flex;transition:transform .5s ease}
+    .slides img{width:100%;border-radius:10px}
+    .btn{position:absolute;top:50%;transform:translateY(-50%);font-size:24px;color:#fff;cursor:pointer;background:rgba(0,0,0,.4);padding:6px 12px;border-radius:50%}
+    .prev{left:10px}.next{right:10px}
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="https://picsum.photos/id/1018/600/300"/>
+      <img src="https://picsum.photos/id/1015/600/300"/>
+      <img src="https://picsum.photos/id/1019/600/300"/>
+    </div>
+    <div class="btn prev" onclick="move(-1)">❮</div>
+    <div class="btn next" onclick="move(1)">❯</div>
+  </div>
+  <script>
+    let index=0;
+    function move(step){
+      const slides=document.getElementById("slides");
+      const total=slides.children.length;
+      index=(index+step+total)%total;
+      slides.style.transform=`translateX(${-index*100}%)`;
+    }
+  </script>
+</body>
+</html>
