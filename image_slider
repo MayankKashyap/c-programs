@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Slider</title>
+</head>
+<body>
+  <h2>Image Slider</h2>
+  <img id="slider" src="https://placekitten.com/300/200" width="300" />
+  <br />
+  <button onclick="prev()">Prev</button>
+  <button onclick="next()">Next</button>
+
+  <script>
+    const images = [
+      "https://placekitten.com/300/200",
+      "https://placekitten.com/301/200",
+      "https://placekitten.com/302/200"
+    ];
+    let index = 0;
+
+    function updateImage() {
+      document.getElementById("slider").src = images[index];
+    }
+
+    function prev() {
+      index = (index - 1 + images.length) % images.length;
+      updateImage();
+    }
+
+    function next() {
+      index = (index + 1) % images.length;
+      updateImage();
+    }
+  </script>
+</body>
+</html>
