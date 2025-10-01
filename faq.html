@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>FAQ Accordion</title>
+  <style>
+    body{font-family:Arial;padding:40px;background:#f1f5f9}
+    .faq{max-width:600px;margin:auto}
+    .item{background:#fff;margin-bottom:10px;padding:16px;border-radius:8px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+    .answer{display:none;margin-top:10px;color:#444}
+    .item.active .answer{display:block}
+  </style>
+</head>
+<body>
+  <div class="faq">
+    <div class="item" onclick="this.classList.toggle('active')">
+      <h3>What is this?</h3>
+      <div class="answer">This is an accordion FAQ component.</div>
+    </div>
+    <div class="item" onclick="this.classList.toggle('active')">
+      <h3>How does it work?</h3>
+      <div class="answer">Clicking a question toggles the answer.</div>
+    </div>
+  </div>
+</body>
+</html>
