@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign In</title>
+  <style>
+    :root{--bg:#f3f6fb;--card:#fff;--accent:#0b76ff}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);display:grid;place-items:center;height:100vh}
+    .card{background:var(--card);padding:28px;border-radius:12px;box-shadow:0 6px 24px rgba(10,20,40,.08);width:320px}
+    input{width:100%;padding:10px;margin:8px 0;border:1px solid #e6e9ef;border-radius:8px}
+    button{width:100%;padding:10px;border:none;background:var(--accent);color:#fff;border-radius:8px;font-weight:600;cursor:pointer}
+    .small{font-size:13px;color:#666;text-align:center;margin-top:10px}
+  </style>
+</head>
+<body>
+  <form class="card" onsubmit="event.preventDefault();alert('Signed in (demo)')">
+    <h2 style="margin:0 0 12px">Welcome back</h2>
+    <label>Email</label>
+    <input type="email" required placeholder="you@example.com" />
+    <label>Password</label>
+    <input type="password" required placeholder="••••••••" />
+    <button type="submit">Sign in</button>
+    <div class="small">Forgot password? • Create an account</div>
+  </form>
+</body>
+</html>
