@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Dashboard</title>
+  <style>
+    body{font-family:Inter,system-ui;margin:0;background:#f5f7fb;color:#0b1220;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .card{background:#fff;padding:16px;border-radius:10px;box-shadow:0 8px 22px rgba(10,20,40,.06)}
+    .chart{height:140px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dashboard</h1>
+    <div>Admin • Sep 30, 2025</div>
+  </header>
+
+  <section class="grid">
+    <div class="card"><h3>Users</h3><p style="font-size:24px;margin:8px 0">12,430</p></div>
+    <div class="card"><h3>Active</h3><p style="font-size:24px;margin:8px 0">3,210</p></div>
+    <div class="card"><h3>Errors</h3><p style="font-size:24px;margin:8px 0">4</p></div>
+  </section>
+
+  <section style="margin-top:18px" class="card">
+    <h3 style="margin:0 0 12px">Weekly traffic</h3>
+    <!-- tiny sparkline made with SVG -->
+    <svg class="chart" viewBox="0 0 200 50" preserveAspectRatio="none" style="width:100%">
+      <polyline fill="none" stroke="#0b76ff" stroke-width="3" points="0,40 30,24 60,20 90,12 120,18 150,8 180,16 200,10" />
+    </svg>
+  </section>
+</body>
+</html>
