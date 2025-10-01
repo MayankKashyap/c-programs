@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Contact Us</title>
+  <style>
+    body{font-family:Inter,system-ui;margin:0;background:#eef2f7;color:#111;display:flex;justify-content:center;align-items:flex-start;padding-top:60px}
+    form{background:#fff;padding:24px;border-radius:10px;max-width:520px;width:100%;box-shadow:0 10px 30px rgba(10,20,40,.06)}
+    input,textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #dfe6ef;border-radius:8px}
+    button{padding:10px 14px;border-radius:8px;border:none;background:#2563eb;color:#fff;cursor:pointer}
+  </style>
+</head>
+<body>
+  <form onsubmit="handle(event)">
+    <h2>Contact Us</h2>
+    <label>Name</label>
+    <input id="name" required />
+    <label>Email</label>
+    <input id="email" type="email" required />
+    <label>Message</label>
+    <textarea id="message" rows="5" required></textarea>
+    <button type="submit">Send message</button>
+  </form>
+
+  <script>
+    function handle(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if (!name || !email || !message) return alert('Please fill all fields.');
+      alert('Thank you, ' + name + '! (demo submit)');
+      // Here you'd send data via fetch() to your backend.
+    }
+  </script>
+</body>
+</html>
