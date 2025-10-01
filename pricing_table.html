@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Pricing Table</title>
+  <style>
+    body{margin:0;font-family:sans-serif;background:#f9fafb;display:flex;justify-content:center;padding:40px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;width:100%;max-width:900px}
+    .card{background:#fff;padding:20px;border-radius:10px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+    h2{margin:0} p{color:#666}
+    .price{font-size:28px;margin:16px 0}
+    button{padding:10px 20px;background:#2563eb;color:#fff;border:none;border-radius:6px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <div class="card"><h2>Basic</h2><p>For starters</p><div class="price">$9/mo</div><button>Choose</button></div>
+    <div class="card"><h2>Pro</h2><p>For professionals</p><div class="price">$29/mo</div><button>Choose</button></div>
+    <div class="card"><h2>Enterprise</h2><p>For big teams</p><div class="price">$99/mo</div><button>Choose</button></div>
+  </div>
+</body>
+</html>
